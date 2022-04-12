@@ -1,19 +1,16 @@
-import argparse
-# ----------------------------------------------------------------------------------------------------------------------
-import pipelines
-# ----------------------------------------------------------------------------------------------------------------------
-input_aset = '_KZ.mp4'
-folder_out = './images/output/'
-# ----------------------------------------------------------------------------------------------------------------------
+# This is a sample Python script.
+
+# Press Ctrl+F5 to execute it or replace it with your code.
+# Press Double Shift to search everywhere for classes, files, tool windows, actions, and settings.
+
+
+def print_hi(name):
+    # Use a breakpoint in the code line below to debug your script.
+    print(f'Hi, {name}')  # Press F9 to toggle the breakpoint.
+
+
+# Press the green button in the gutter to run the script.
 if __name__ == '__main__':
+    print_hi('PyCharm')
 
-    parser = argparse.ArgumentParser()
-    parser.add_argument('--input', '-i', help='path to stream or video e.g.(rtsp://localhost:8554/live.stream)', default=input_aset)
-    parser.add_argument('--output', '-out', help='path to output folder',default=folder_out)
-    args = parser.parse_args()
-    Pipe = pipelines.PoseEstimation_pipelines(args.output)
-    Pipe.evaluate_VP_FOV_height(args.input,do_debug=True)
-
-
-
-
+# See PyCharm help at https://www.jetbrains.com/help/pycharm/
