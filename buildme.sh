@@ -1,1 +1,1 @@
-docker build -f D.Dockerfile -t conda-image-pose .
+docker build -f D.Dockerfile -t conda-image-pose-p36 .
