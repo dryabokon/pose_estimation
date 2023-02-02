@@ -60,7 +60,7 @@ class PoseEstimation_pipelines:
             for file_name in tools_IO.get_filenames(URL,'*.jpg')[:limit]:
                 copyfile(URL + '/' + file_name, folder_out + file_name)
         else:
-            tools_video.extract_frames_v2(URL, folder_out, prefix='', start_frame=0, end_frame=limit, step=1, scale=1,silent=True)
+            tools_video.extract_frames_v2(URL, folder_out, prefix='', start_frame=0, end_frame=limit, step=1, scale=1)
         return
 # ----------------------------------------------------------------------------------------------------------------------
     def pipeline_post_process_detection(self,df_boxes,size_min=20,size_max=900,th_min_iou=0.25):
@@ -175,7 +175,8 @@ class PoseEstimation_pipelines:
         self.V.VP.H, self.V.VP.W = image.shape[:2]
         return
 # ----------------------------------------------------------------------------------------------------------------------
-    def E2E_v1_cars(self, URL, df_boxes_cars=None, from_cache = True, do_debug=True):
+    def E2E_v1_cars(self, URL, df_boxes_cars:pd.DataFrame=None, from_cache = True, do_debug=True):
+
 
         if not from_cache:
             tools_IO.remove_files(self.folder_out,create=True)

@@ -32,15 +32,15 @@ from_cache = False
 # cam_height_m,cam_fov_x_deg,df_boxes=None,None,None
 # URL = './KZ_small.mp4'
 # ----------------------------------------------------------------------------------------------------------------------
-URL = './KZ_small.mp4'
-df_boxes_cars = pd.read_csv('./images/ex_KZ2/df_boxes_filtered.csv')
-cam_fov_x_deg=14
+# URL = './KZ_small.mp4'
+# df_boxes_cars = pd.read_csv('./images/ex_KZ2/df_boxes_filtered.csv')
+# cam_fov_x_deg=14
 # ----------------------------------------------------------------------------------------------------------------------
-# URL = './images/ex_CZ/TNO-7180R_20220418134537.avi'
-# df_boxes_cars = pd.read_csv('./images/ex_CZ/df_boxes_filtered_TNO_7180R_20220418134537.csv')
+URL = './images/ex_CZ/TNO-7180R_20220418134537.avi'
+df_boxes_cars = pd.read_csv('./images/ex_CZ/df_boxes_filtered_TNO_7180R_20220418134537.csv')
 #df_boxes_lps = cars_to_LPs(df_boxes_cars)
-# cam_height_m=7.8
-#cam_fov_x_deg = 8.5
+cam_height_m=7.8
+cam_fov_x_deg = 8.5
 # ----------------------------------------------------------------------------------------------------------------------
 # URL = './images/ex_CZ/TNO-7180R_20220418135426.avi'
 # df_boxes = pd.read_csv('./images/ex_CZ/df_boxes_filtered_TNO_7180R_20220418135426.csv')[:118]
